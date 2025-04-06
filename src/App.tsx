@@ -75,26 +75,33 @@ function App() {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
   <div className="absolute inset-0">
     <img 
-      src="https://images.unsplash.com/photo-1581091870622-2f5ce43d6875?auto=format&fit=crop&q=80"
+      src="https://img.freepik.com/premium-photo/man-hold-document-user-icon-corporate-data-management-system-dms-document-management-system-concept-businessman-click-publish-document-connected-with-corporate-users_150455-11261.jpg?ga=GA1.1.1538238808.1729515699&semt=ais_hybrid&w=740"
       alt="Background"
-      className="w-full h-full object-cover opacity-20"
+      className="w-full h-full object-cover opacity-15"
     />
   </div>
   <div className="container mx-auto px-4 z-10 text-center">
-    <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+    <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500">
       Placements.AI by Be Practical
     </h1>
     <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
       Unlock job success with AI-driven mock interviews, smart resume builder, skill-based job recommendations, and real-time mentorship – all under one roof.
     </p>
-    <div className="flex gap-4 justify-center">
-      <a href="https://be-practical.com/book-demo" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
-        Try Placement.AI
-      </a>
-      <a href="https://be-practical.com" className="border-2 border-green-400 hover:bg-green-400/10 px-8 py-4 rounded-full text-lg font-semibold transition-all">
-        Learn More
-      </a>
-    </div>
+    <div className="flex gap-4 justify-center flex-wrap">
+  <a
+    href="https://be-practical.com/book-demo"
+    className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all w-full sm:w-auto text-center"
+  >
+    Try Placement.AI
+  </a>
+  <a
+    href="https://be-practical.com"
+    className="border-2 border-red-400 hover:bg-red-400/10  px-8 py-4 rounded-full text-lg font-semibold transition-all w-full sm:w-auto text-center"
+  >
+    Learn More
+  </a>
+</div>
+
   </div>
 </section>
 
