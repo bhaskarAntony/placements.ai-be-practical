@@ -81,7 +81,7 @@ function App() {
     />
   </div>
   <div className="container mx-auto px-4 z-10 text-center">
-    <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500">
+    <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-500">
       Placements.AI by Be Practical
     </h1>
     <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -113,7 +113,7 @@ function App() {
       <Brain className="w-16 h-16 text-green-400 mx-auto mb-6" />
       <h2 className="text-4xl font-bold mb-6">AI-Powered Placement Tools</h2>
       <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-        Advanced placement support system powered by Fermion, LinupX, and custom Be Practical tools to supercharge your career.
+        Advanced placement support system  in Be Practical tools to supercharge your career.
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
