@@ -1,5 +1,6 @@
 import React from 'react';
-import { Brain, Users, Code2, Database, Cloud, Terminal, BarChart as ChartBar, Globe, Laptop, Target, Rocket, Award, MessageSquare, Building2, Star, BookOpen, Calendar, Video, Briefcase, GraduationCap } from 'lucide-react';
+import { Brain, Users, Code2, Database, Cloud, Terminal, BarChart as ChartBar, Globe, Laptop, Target, Rocket, Award, MessageSquare, Building2, Star, BookOpen, Calendar, Video, Briefcase, GraduationCap, Mic, FileText, FolderKanban, Gauge, UserCheck, ClipboardCheck, Sparkle, LayoutDashboard, Bot, MessageCircle } from 'lucide-react';
+import PlacementCarousel from './PlacementCarousel';
 
 function App() {
   const companies = [
@@ -34,126 +35,163 @@ function App() {
       rating: 5,
     },
   ];
+
+  const placementPartners = [
+    {
+      name: "AI Fermion",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo URL
+      description: "AI-based tech firm actively hiring full-stack & ML developers.",
+    },
+    {
+      name: "Linupex",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo URL
+      description: "DevOps & Cloud consulting firm hiring across domains.",
+    },
+    {
+      name: "TCS iON",
+      logo: "https://via.placeholder.com/100",
+      description: "National-level recruitment partner for freshers and interns.",
+    },
+    {
+      name: "Infosys Springboard",
+      logo: "https://via.placeholder.com/100",
+      description: "Training & placement support through Infosys programs.",
+    },
+    {
+      name: "Tech Mahindra",
+      logo: "https://via.placeholder.com/100",
+      description: "Tier-1 hiring partner for Java and Cloud engineers.",
+    },
+    {
+      name: "Capgemini",
+      logo: "https://via.placeholder.com/100",
+      description: "Global tech firm recruiting through campus connect drives.",
+    },
+    // Add more partners as needed
+  ];
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80"
-            alt="Background"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            Master Tech Skills & Ace Your Interviews
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive tech education platform with AI-powered interview preparation, expert mentorship, and hands-on training in Full Stack Development, Cloud Computing, Data Science, and more.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a href='https://be-practical.com/book-demo' className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
-              Start Learning
-            </a>
-            <a href='https://be-practical.com' className="border-2 border-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-full text-lg font-semibold transition-all">
-              View Courses
-            </a>
-          </div>
-        </div>
-      </section>
+  <div className="absolute inset-0">
+    <img 
+      src="https://images.unsplash.com/photo-1581091870622-2f5ce43d6875?auto=format&fit=crop&q=80"
+      alt="Background"
+      className="w-full h-full object-cover opacity-20"
+    />
+  </div>
+  <div className="container mx-auto px-4 z-10 text-center">
+    <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+      Placements.AI by Be Practical
+    </h1>
+    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+      Unlock job success with AI-driven mock interviews, smart resume builder, skill-based job recommendations, and real-time mentorship – all under one roof.
+    </p>
+    <div className="flex gap-4 justify-center">
+      <a href="https://be-practical.com/book-demo" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all">
+        Try Placement.AI
+      </a>
+      <a href="https://be-practical.com" className="border-2 border-green-400 hover:bg-green-400/10 px-8 py-4 rounded-full text-lg font-semibold transition-all">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
 
       {/* Tech Tracks Overview */}
       <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Code2 className="w-16 h-16 text-blue-400 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">Complete Tech Career Tracks</h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Choose from our comprehensive learning paths designed by industry experts
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* MERN Stack */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <Database className="w-12 h-12 text-yellow-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">MERN Stack</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• MongoDB for Database</li>
-                <li>• Express.js Backend</li>
-                <li>• React.js Frontend</li>
-                <li>• Node.js Runtime</li>
-                <li>• REST API Development</li>
-              </ul>
-            </div>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <Brain className="w-16 h-16 text-green-400 mx-auto mb-6" />
+      <h2 className="text-4xl font-bold mb-6">AI-Powered Placement Tools</h2>
+      <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        Advanced placement support system powered by Fermion, LinupX, and custom Be Practical tools to supercharge your career.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* MEAN Stack */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <Database className="w-12 h-12 text-green-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">MEAN Stack</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• MongoDB Database</li>
-                <li>• Express.js Server</li>
-                <li>• Angular Frontend</li>
-                <li>• Node.js Backend</li>
-                <li>• TypeScript Development</li>
-              </ul>
-            </div>
+      {/* AI Mock Interviews */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <Mic className="w-12 h-12 text-yellow-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">AI Mock Interviews</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Live simulation with instant feedback</li>
+          <li>• Voice tone analysis for HR rounds</li>
+          <li>• Coding + Behavioral interviews</li>
+          <li>• Scoring & improvement suggestions</li>
+          <li>• Auto-recorded for revision</li>
+        </ul>
+      </div>
 
-            {/* Java Full Stack */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <Terminal className="w-12 h-12 text-red-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">Java Full Stack</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Spring Boot</li>
-                <li>• Hibernate ORM</li>
-                <li>• React/Angular Frontend</li>
-                <li>• MySQL/PostgreSQL</li>
-                <li>• Microservices Architecture</li>
-              </ul>
-            </div>
+      {/* Smart Resume Builder */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <FileText className="w-12 h-12 text-blue-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">Smart Resume Builder</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• ATS-ready resume formats</li>
+          <li>• AI-based skill highlights</li>
+          <li>• Auto-fetch from LinkedIn or input</li>
+          <li>• Export PDF / DOC in 1-click</li>
+          <li>• Resume score & optimization tips</li>
+        </ul>
+      </div>
 
-            {/* Python Full Stack */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <Terminal className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">Python Full Stack</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Django/Flask Backend</li>
-                <li>• React/Vue Frontend</li>
-                <li>• PostgreSQL Database</li>
-                <li>• RESTful APIs</li>
-                <li>• Python Web Development</li>
-              </ul>
-            </div>
+      {/* Job Recommendation Engine */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <Briefcase className="w-12 h-12 text-green-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">Job Recommendation Engine</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Skill-matching job alerts</li>
+          <li>• Updated daily with real listings</li>
+          <li>• Apply with one click</li>
+          <li>• Save & track applications</li>
+          <li>• Remote + Hybrid jobs included</li>
+        </ul>
+      </div>
 
-            {/* Cloud & DevOps */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <Cloud className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">Cloud & DevOps</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• AWS/Azure/GCP</li>
-                <li>• Docker & Kubernetes</li>
-                <li>• CI/CD Pipelines</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Cloud Security</li>
-              </ul>
-            </div>
+      {/* Project Portfolio Builder */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <FolderKanban className="w-12 h-12 text-purple-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">Project Portfolio Builder</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Host class + personal projects</li>
+          <li>• Live preview links</li>
+          <li>• GitHub integration</li>
+          <li>• PDF-ready summary portfolio</li>
+          <li>• Showcased on Placement profile</li>
+        </ul>
+      </div>
 
-            {/* Data Science */}
-            <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
-              <ChartBar className="w-12 h-12 text-indigo-400 mb-4" />
-              <h3 className="text-2xl font-semibold mb-4">Data Science</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Python for Data Science</li>
-                <li>• Machine Learning</li>
-                <li>• Deep Learning</li>
-                <li>• Data Visualization</li>
-                <li>• Statistical Analysis</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Interview Readiness Score */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <Gauge className="w-12 h-12 text-red-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">Interview Readiness Score</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Real-time performance tracking</li>
+          <li>• Based on coding, HR, aptitude</li>
+          <li>• Daily progress graph</li>
+          <li>• Smart suggestions to improve</li>
+          <li>• Built with LinupX AI engine</li>
+        </ul>
+      </div>
+
+      {/* One-on-One Mentorship */}
+      <div className="bg-gray-900 p-8 rounded-xl hover:transform hover:scale-105 transition-all">
+        <UserCheck className="w-12 h-12 text-indigo-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4">One-on-One Mentorship</h3>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Book sessions with industry experts</li>
+          <li>• Resume review + job guidance</li>
+          <li>• Feedback on interview performance</li>
+          <li>• Career roadmap planning</li>
+          <li>• Personal chat & follow-ups</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* AI Interview Preparation */}
       <section className="py-20 bg-gray-900">
@@ -196,251 +234,111 @@ function App() {
       </section>
 
       {/* Technologies & Tools */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Terminal className="w-16 h-16 text-green-400 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">Technologies You'll Master</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Frontend</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>React.js</li>
-                <li>Angular</li>
-                <li>Vue.js</li>
-                <li>TypeScript</li>
-                <li>Next.js</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Backend</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>Node.js</li>
-                <li>Spring Boot</li>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>Express.js</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">Database</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>MongoDB</li>
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-                <li>Redis</li>
-                <li>Elasticsearch</li>
-              </ul>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold mb-4">DevOps</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Jenkins</li>
-                <li>Git</li>
-                <li>AWS/Azure</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+
+<section className="py-20 bg-gray-800">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <Bot className="w-16 h-16 text-blue-500 mx-auto mb-6" />
+      <h2 className="text-4xl font-bold mb-4 text-white bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        Tech Behind Placements.AI
+      </h2>
+      <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        Boost your placement readiness with cutting-edge tools powered by AI, industry-standard workflows, and smart automation.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      {/* AI Mock Interviews */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <UserCheck className="w-10 h-10 text-green-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">AI Mock Interviews</h3>
+        <p className="text-gray-400 text-sm">Simulated HR & Tech interviews with real-time voice and behavior feedback.</p>
+      </div>
+
+      {/* Resume Builder */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <FileText className="w-10 h-10 text-yellow-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Smart Resume Builder</h3>
+        <p className="text-gray-400 text-sm">Create ATS-friendly resumes aligned with current hiring trends and job roles.</p>
+      </div>
+
+      {/* Interview Feedback */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <MessageCircle className="w-10 h-10 text-purple-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Real-time Feedback</h3>
+        <p className="text-gray-400 text-sm">Voice, confidence, and facial analysis with improvement suggestions.</p>
+      </div>
+
+      {/* Live Dashboard */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <LayoutDashboard className="w-10 h-10 text-pink-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Placement Dashboard</h3>
+        <p className="text-gray-400 text-sm">Track interviews, tasks, resume scores, and skill readiness in one place.</p>
+      </div>
+
+      {/* Portfolio Generator */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <Sparkle className="w-10 h-10 text-indigo-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Portfolio Generator</h3>
+        <p className="text-gray-400 text-sm">Auto-generate a personal portfolio with your projects, skills, and testimonials.</p>
+      </div>
+
+      {/* Job Board */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <Briefcase className="w-10 h-10 text-red-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Live Job Board</h3>
+        <p className="text-gray-400 text-sm">Curated openings updated daily. Apply directly from the dashboard.</p>
+      </div>
+
+      {/* Skill Assessments */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <ClipboardCheck className="w-10 h-10 text-cyan-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Skill Assessments</h3>
+        <p className="text-gray-400 text-sm">Topic-wise quizzes and real-world coding assessments for interview readiness.</p>
+      </div>
+
+      {/* Code Labs */}
+      <div className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-blue-500/30 hover:scale-105 transition-all text-center">
+        <Code2 className="w-10 h-10 text-orange-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Code Playground</h3>
+        <p className="text-gray-400 text-sm">Practice in-browser with support for C, C++, Java, Python, and more.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Practical Projects */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Laptop className="w-16 h-16 text-purple-400 mx-auto mb-6 animate-pulse" />
-            <h2 className="text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-600">
-              Real-World Projects
-            </h2>
-            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-              Dive into hands-on, production-grade projects using cutting-edge tech stacks. Build a portfolio that stands out in the industry!
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* MERN Stack Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Online Learning Platform</h3>
-              <p className="text-gray-400 mb-4">Create a scalable e-learning app with video streaming, quizzes, and user progress tracking.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Node.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">MongoDB</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Real-Time Chat Application</h3>
-              <p className="text-gray-400 mb-4">Build a chat app with group messaging, file sharing, and real-time notifications.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Express.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">Socket.io</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Food Delivery System</h3>
-              <p className="text-gray-400 mb-4">Develop a full-featured food ordering app with live order tracking and payment integration.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Node.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">MongoDB</span>
-              </div>
-            </div>
-
-            {/* MEAN Stack Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Event Management Portal</h3>
-              <p className="text-gray-400 mb-4">Design a platform for event creation, ticket booking, and attendee management.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Angular</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Node.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">MongoDB</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Job Board Application</h3>
-              <p className="text-gray-400 mb-4">Build a job listing platform with advanced search, resume uploads, and employer dashboards.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Angular</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Express.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">MongoDB</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Fitness Tracker</h3>
-              <p className="text-gray-400 mb-4">Create a fitness app with workout logging, progress charts, and social sharing features.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Angular</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Node.js</span>
-                <span className="px-3 py-1 bg-yellow-500/20 rounded-full text-yellow-400 text-sm">MongoDB</span>
-              </div>
-            </div>
-
-            {/* Java Full Stack Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Banking System</h3>
-              <p className="text-gray-400 mb-4">Develop a secure online banking app with account management and transaction processing.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Spring Boot</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">PostgreSQL</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Healthcare Portal</h3>
-              <p className="text-gray-400 mb-4">Build a patient management system with appointment scheduling and medical records.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Spring Boot</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Angular</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">MySQL</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Inventory Management</h3>
-              <p className="text-gray-400 mb-4">Create a system for stock tracking, order processing, and real-time analytics.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm">Spring Boot</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">PostgreSQL</span>
-              </div>
-            </div>
-
-            {/* Python Full Stack Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Blogging Platform</h3>
-              <p className="text-gray-400 mb-4">Design a dynamic blog site with user authentication, comments, and rich text editing.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Django</span>
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full text-purple-400 text-sm">Vue.js</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">PostgreSQL</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Expense Tracker</h3>
-              <p className="text-gray-400 mb-4">Build a personal finance app with budgeting tools, charts, and multi-user support.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Flask</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">React</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">SQLite</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">E-Voting System</h3>
-              <p className="text-gray-400 mb-4">Develop a secure online voting platform with blockchain-inspired audit trails.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Django</span>
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full text-purple-400 text-sm">Vue.js</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">PostgreSQL</span>
-              </div>
-            </div>
-
-            {/* Cloud & DevOps Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">CI/CD Pipeline Setup</h3>
-              <p className="text-gray-400 mb-4">Automate deployment for a web app using containerization and cloud services.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full text-purple-400 text-sm">Docker</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Jenkins</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">AWS</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Serverless Chatbot</h3>
-              <p className="text-gray-400 mb-4">Build a scalable chatbot using cloud functions and natural language processing.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full text-purple-400 text-sm">AWS Lambda</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">API Gateway</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">DynamoDB</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Kubernetes Cluster</h3>
-              <p className="text-gray-400 mb-4">Deploy a microservices app with load balancing and auto-scaling on the cloud.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full text-purple-400 text-sm">Kubernetes</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Docker</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">GCP</span>
-              </div>
-            </div>
-
-            {/* Data Science Projects */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Stock Price Predictor</h3>
-              <p className="text-gray-400 mb-4">Build a model to forecast stock prices using historical data and visualizations.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-400 text-sm">Python</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Pandas</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">TensorFlow</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Sentiment Analyzer</h3>
-              <p className="text-gray-400 mb-4">Create a tool to analyze social media sentiment with real-time dashboards.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-400 text-sm">Python</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">NLP</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">Plotly</span>
-              </div>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">Fraud Detection System</h3>
-              <p className="text-gray-400 mb-4">Develop an ML model to detect fraudulent transactions in real-time.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-400 text-sm">Python</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full text-blue-400 text-sm">Scikit-learn</span>
-                <span className="px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-sm">PySpark</span>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <a href='https://be-practical.com/book-demo' className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-lg">
-              Start Building Now
-            </a>
-          </div>
+      {/* <section className="py-10 px-4 md:px-10 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <Briefcase className="mx-auto h-10 w-10 text-blue-600" />
+          <h2 className="text-3xl font-bold mt-2">Our Hiring & Placement Partners</h2>
+          <p className="text-gray-600 mt-2">
+            These industry leaders trust our students and offer real-world opportunities.
+          </p>
         </div>
-      </section>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {placementPartners.map((company, index) => (
+            <div key={index} className="hover:shadow-xl transition duration-300">
+              <div className="flex flex-col items-center text-center p-6">
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="w-20 h-20 object-contain mb-4"
+                />
+                <h3 className="text-xl font-semibold">{company.name}</h3>
+                <p className="text-gray-500 text-sm mt-2">{company.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section> */}
+    <PlacementCarousel/>
 
       {/* Industry Partners */}
       {/* <section className="py-20 bg-gray-800">
@@ -472,7 +370,7 @@ function App() {
           </div>
         </div>
       </section> */}
-      <section className="py-20 bg-gray-800">
+      {/* <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Building2 className="w-16 h-16 text-blue-400 mx-auto mb-6 animate-bounce" />
@@ -505,7 +403,7 @@ function App() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
       
 
       {/* Student Success Stories */}
@@ -612,7 +510,7 @@ function App() {
       </section>
 
       {/* Certification Programs */}
-      <section className="py-20 bg-gray-800">
+      {/* <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Award className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
@@ -637,7 +535,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mentorship Program */}
       <section className="py-20 bg-gray-900">
@@ -680,73 +578,137 @@ function App() {
       </section>
 
       {/* Mock Interview Program */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Calendar className="w-16 h-16 text-red-400 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">Comprehensive Interview Preparation</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-900 p-8 rounded-xl">
-              <h3 className="text-2xl font-semibold mb-4">Technical Interviews</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li>• Data Structures & Algorithms</li>
-                <li>• System Design</li>
-                <li>• Code Reviews</li>
-                <li>• Architecture Patterns</li>
-              </ul>
-            </div>
-            <div className="bg-gray-900 p-8 rounded-xl">
-              <h3 className="text-2xl font-semibold mb-4">Behavioral Interviews</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li>• Leadership Principles</li>
-                <li>• Situation-based Questions</li>
-                <li>• Communication Skills</li>
-                <li>• Problem-solving Approach</li>
-              </ul>
-            </div>
-          </div>
+      <section className="py-20 bg-gray-800 text-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <Calendar className="w-16 h-16 text-red-400 mx-auto mb-6" />
+      <h2 className="text-4xl font-bold mb-4">Comprehensive Interview Preparation</h2>
+      <p className="text-gray-400 max-w-2xl mx-auto">
+        Our placement success isn't by chance — it's by design. From coding rounds to real-time HR questions, we train you for everything.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div className="bg-gray-900 p-8 rounded-xl">
+        <h3 className="text-2xl font-semibold mb-4">Technical Interviews</h3>
+        <ul className="space-y-4 text-gray-300">
+          <li>• Data Structures & Algorithms</li>
+          <li>• System Design (Live Scenarios)</li>
+          <li>• Real Code Reviews with Mentors</li>
+          <li>• High-level Architecture Round Prep</li>
+        </ul>
+      </div>
+      <div className="bg-gray-900 p-8 rounded-xl">
+        <h3 className="text-2xl font-semibold mb-4">Behavioral Interviews</h3>
+        <ul className="space-y-4 text-gray-300">
+          <li>• HR Round Mock Interviews</li>
+          <li>• Leadership & STAR Technique</li>
+          <li>• How to Handle Gaps & Career Shifts</li>
+          <li>• Effective Communication Mastery</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* 🚀 Placement Impact Section */}
+    <div className="bg-gray-900 rounded-xl p-10 shadow-lg">
+      <h3 className="text-3xl font-bold mb-6 text-center text-red-400">Real Students. Real Placements.</h3>
+      <div className="grid md:grid-cols-2 gap-8">
+        <div>
+          <p className="text-lg mb-4 text-gray-300">
+            🎯 “I successfully completed the Python Development course at Be Practical Tech Solutions, and it was an amazing learning experience. The training was well-structured, with a strong focus on practical applications. A special thanks to Javeed Sir and Namitha Maam for their excellent guidance and support throughout the course. I highly recommend this institute to anyone looking to build a career in tech!” 
+          </p>
+          <p className="text-sm text-gray-500 italic">— Sajjad Ahmed</p>
         </div>
-      </section>
+        <div>
+          <p className="text-lg mb-4 text-gray-300">
+            🚀 “I had a good experience at BE Practical Tech Solution Institute while completing my Java Full Stack course. The instructors, Atul Vaibhav Sir and Javed alli Sir provided excellent guidance, making technical concepts easy to understand. The training had a perfect balance between theoretical knowledge and hands-on practical sessions, equipping me with real-world skills. Kavitha Mam and the entire staff were supportive, always ready to assist with any doubts, which made the learning process smooth.”
+          </p>
+          <p className="text-sm text-gray-500 italic">— 
+          SANJAY RAO</p>
+        </div>
+      </div>
+
+      <div className="mt-10 text-center">
+        <p className="text-gray-400 mb-2">And these are just a few...</p>
+        <p className="text-white text-xl font-semibold">We’re helping students land roles at companies like TCS iON, Infosys, Capgemini, and Wipro every month!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Learning Paths */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <GraduationCap className="w-16 h-16 text-green-400 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">Structured Learning Paths</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4">Beginner Track</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Programming Fundamentals</li>
-                <li>• Basic Web Development</li>
-                <li>• Version Control</li>
-                <li>• Database Basics</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4">Intermediate Track</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Full Stack Development</li>
-                <li>• API Design</li>
-                <li>• Testing & Deployment</li>
-                <li>• Cloud Basics</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-4">Advanced Track</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• System Architecture</li>
-                <li>• Microservices</li>
-                <li>• DevOps & SRE</li>
-                <li>• Performance Optimization</li>
-              </ul>
-            </div>
-          </div>
+      <section className="py-20 bg-gray-900 text-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <GraduationCap className="w-16 h-16 text-green-400 mx-auto mb-6" />
+      <h2 className="text-4xl font-bold mb-4">Placements.AI — Real Companies. Real Offers.</h2>
+      <p className="text-gray-400 max-w-2xl mx-auto">
+        From freshers to working professionals, we help launch tech careers at leading companies. Your next job starts here.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Development Roles */}
+      <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-green-500/20 transition">
+        <div className="flex items-center space-x-3 mb-4">
+          <span className="bg-green-500 p-2 rounded-full">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2"
+              viewBox="0 0 24 24"><path d="M3 7l6 6-6 6M21 7l-6 6 6 6" /></svg>
+          </span>
+          <h3 className="text-xl font-semibold">Development & Engineering</h3>
         </div>
-      </section>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Placed at IBM, TCS Red Bus, and Infosys and more...</li>
+          <li>• Frontend, Backend, and Full Stack roles</li>
+          <li>• MERN / Java / Python-based projects</li>
+        </ul>
+      </div>
+
+      {/* Data & AI Roles */}
+      <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/20 transition">
+        <div className="flex items-center space-x-3 mb-4">
+          <span className="bg-purple-500 p-2 rounded-full">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2"
+              viewBox="0 0 24 24"><path d="M12 20l9-5-9-5-9 5 9 5z" /><path d="M12 12l9-5-9-5-9 5 9 5z" /></svg>
+          </span>
+          <h3 className="text-xl font-semibold">Data Science & AI</h3>
+        </div>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Hired by Cognizant, Capgemini</li>
+          <li>• ML Engineering & AI Support roles</li>
+          <li>• Python, TensorFlow, Prompt Engineering</li>
+        </ul>
+      </div>
+
+      {/* DevOps / Cloud Roles */}
+      <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-500/20 transition">
+        <div className="flex items-center space-x-3 mb-4">
+          <span className="bg-blue-500 p-2 rounded-full">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2"
+              viewBox="0 0 24 24"><path d="M3 10h4l3 10 4-18 3 8h4" /></svg>
+          </span>
+          <h3 className="text-xl font-semibold">Cloud & DevOps</h3>
+        </div>
+        <ul className="space-y-2 text-gray-300">
+          <li>• Placed at Linupex, Wipro, and AWS Partners</li>
+          <li>• Roles in DevOps, SRE, and Infra Automation</li>
+          <li>• CI/CD, Docker, Kubernetes, AWS</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Call to Action */}
+   <div className="mt-16 text-center">
+  <p className="text-lg text-gray-400 mb-4">Want to be our next placement story?</p>
+  <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition">
+    Join Placements
+  </button>
+</div>
+
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
